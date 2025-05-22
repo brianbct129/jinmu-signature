@@ -22,3 +22,26 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.tooltip {
+  @apply relative inline-block;
+}
+
+.tooltip:hover::after {
+  content: attr(data-tip);
+  @apply absolute z-10 px-2 py-1 text-xs text-white bg-gray-800 rounded whitespace-nowrap;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 5px;
+}
+
+.tooltip:hover::before {
+  content: "";
+  @apply absolute w-0 h-0 border-solid border-transparent border-t-gray-800;
+  border-width: 5px;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: -5px;
+}

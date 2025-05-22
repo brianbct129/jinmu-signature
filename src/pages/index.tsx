@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import RestaurantMenu from "@/components/restaurant-menut";
 
 export default function Home() {
   const home1 = "/PNG-Main-Menu/90.png";
@@ -38,17 +39,21 @@ export default function Home() {
         layout="intrinsic"
       />
 
+      {/* restaurant menu */}
+      <RestaurantMenu />
+      {/* restaurant menu */}
+
       <div className="">
-    {images.slice(0,4).map((src, index) => (
-      <Image
-        key={index}
-        src={src}
-        alt="Menu Jinmu"
-        width={1200}
-        height={0}
-        layout="intrinsic"
-      />
-    ))}
+        {images.slice(0,4).map((src, index) => (
+          <Image
+            key={index}
+            src={src}
+            alt="Menu Jinmu"
+            width={1200}
+            height={0}
+            layout="intrinsic"
+          />
+        ))}
       </div>
 
     </div>
