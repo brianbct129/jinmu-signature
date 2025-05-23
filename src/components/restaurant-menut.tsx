@@ -1,8 +1,10 @@
 import { menuItems } from "@/data/menu-data"
 import { Star, Award, Flame } from "lucide-react"
+import { RestaurantMenuProps } from "@/types/menu";
 
 
-export default function RestaurantMenu() {
+export default function RestaurantMenu({ 
+    onSeeMenuClick, } : RestaurantMenuProps) {
 
     // Tag components
     const TagIcon = ({ tag }: { tag: string }) => {
@@ -31,11 +33,11 @@ export default function RestaurantMenu() {
     }
 
     return (
-        <div className="bg-white bg-[url('/bamboo-pattern.svg')] bg-opacity-95 bg-fixed bg-repeat w-[1200px]">
+        <div className="bg-white bg-[url('/bamboo-pattern.svg')] bg-opacity-95 bg-fixed bg-repeat max-w-screen-xl w-full mx-auto">
             <div className="container mx-auto px-4 py-12 max-w-6xl">
                 {/* restaurant logo */}
 
-                 <h1 className="text-center font-serif text-4xl md:text-5xl text-red-800 mb-8 tracking-wide">JINMU SIGNATURE</h1>
+                 <h1 className="text-center font-serif text-2xl sm:text-3xl md:text-5xl text-red-800 mb-8 tracking-wide">JINMU SIGNATURE</h1>
 
                 <div className="text-center mb-12">
                     <div className="inline-block h-0.5 w-16 bg-amber-500 mx-2"></div>
@@ -53,14 +55,16 @@ export default function RestaurantMenu() {
                                         <h2 className={`font-serif text-2xl font-bold text-red-800 tracking-wider px-2 py-1 ${index % 2 !== 0 ? "text-end " : "" }`}>
                                             {menu.category}
                                         </h2>
-                                        <div className="flex space-x-1 pt-3">
+                                        <div className="flex flex-wrap space-x-1 pt-3">
                                             {menu.tags.map((tag, tagIndex) => (
                                                 <TagIcon key={tagIndex} tag={tag} />
                                             ))}
                                         </div>
                                     </div>
 
-                                    <button className="text-white px-5 py-1 bg-red-800 rounded-xl cursor-pointer hover:bg-red-700 transition-colors duration-200">see menu</button>
+                                    <button 
+                                    onClick={() => onSeeMenuClick(menu.category)}
+                                    className="text-white px-5 py-1 bg-red-800 rounded-xl cursor-pointer hover:bg-red-700 transition-colors duration-200">see menu</button>
                                 </div>
                                 <div className="border-b border-amber-300 w-full mt-2"></div>
                                 {/* <div className={`absolute -bottom-1 h-0.5 w-12 bg-red-800 right-0`}></div> */}
