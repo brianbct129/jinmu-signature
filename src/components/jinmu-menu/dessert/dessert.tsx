@@ -1,22 +1,23 @@
 import Image from "next/image";
 
-export default function Dimsum() {
+export default function DessertMenu() {
 
-    const imageCount = 13;
-    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Daytime/${i + 1}.png`);
+    const imageCount = 80;
+    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.png`).slice(76,80);
 
     return (
         <div className="">
-            {images.slice(4,13).map((src, index) => (
+            {images.map((src, index) => (
                 <Image
                     key={index}
                     src={src}
-                    alt="Menu Jinmu"
+                    alt="Dessert Menu Jinmu"
                     width={1200}
                     height={0}
                     layout="intrinsic"
                 />
             ))}
         </div>
-    )
+    );
+
 }

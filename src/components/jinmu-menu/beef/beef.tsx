@@ -1,13 +1,14 @@
 import Image from "next/image";
 
-export default function Dimsum() {
+export default function Beef() {
+    const imageCount = 44;
+    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.png`).slice(42,44);
 
-    const imageCount = 13;
-    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Daytime/${i + 1}.png`);
+    console.log(images)
 
     return (
         <div className="">
-            {images.slice(4,13).map((src, index) => (
+            {images.map((src, index) => (
                 <Image
                     key={index}
                     src={src}

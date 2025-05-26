@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-export default function Dimsum() {
+export default function Pork() {
 
-    const imageCount = 13;
-    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Daytime/${i + 1}.png`);
-
+    const imageCount = 41;
+    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.png`).slice(34,41);
+    
     return (
         <div className="">
-            {images.slice(4,13).map((src, index) => (
+            {images.map((src, index) => (
                 <Image
                     key={index}
                     src={src}

@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-export default function Dimsum() {
-
-    const imageCount = 13;
-    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Daytime/${i + 1}.png`);
-
+export default function SeaFood() {
+    
+    const imageCount = 30;
+    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.png`).slice(8,30);
+    
     return (
         <div className="">
-            {images.slice(4,13).map((src, index) => (
+            {images.map((src, index) => (
                 <Image
                     key={index}
                     src={src}

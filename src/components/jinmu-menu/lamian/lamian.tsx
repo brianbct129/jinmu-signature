@@ -1,17 +1,18 @@
 import Image from "next/image";
 
-export default function Dimsum() {
+export default function LamianMenu() {
 
-    const imageCount = 13;
-    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Daytime/${i + 1}.png`);
+    const imageCount = 17;
+    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Daytime/${i + 1}.png`).slice(13,17);
+
 
     return (
         <div className="">
-            {images.slice(4,13).map((src, index) => (
+            {images.map((src, index) => (
                 <Image
                     key={index}
                     src={src}
-                    alt="Menu Jinmu"
+                    alt="Lamian - Jinmu Menu"
                     width={1200}
                     height={0}
                     layout="intrinsic"

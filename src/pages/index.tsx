@@ -1,10 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
-import RestaurantMenu from "@/components/restaurant-menut";
+import RestaurantMenu from "@/components/restaurant-menu";
 import Dumpling from "@/components/jinmu-menu/dumpling/dumpling";
 import Dimsum from "@/components/jinmu-menu/dimsum/dimsum";
 import { useRef } from 'react';
-import { menuItems } from "@/data/menu-data";
+import SaladSoup from "@/components/jinmu-menu/salad_soup/salad_soup";
+import SeaFood from "@/components/jinmu-menu/seafood/seafood";
+import Poultry from "@/components/jinmu-menu/poultry/poultry";
+import Pork from "@/components/jinmu-menu/pork/pork";
+import Beef from "@/components/jinmu-menu/beef/beef";
+import Tofu from "@/components/jinmu-menu/tofu/tofu";
+import OthersMenu from "@/components/jinmu-menu/others/others";
+import RiceMenu from "@/components/jinmu-menu/rice_dll/rice";
+import VegetableMenu from "@/components/jinmu-menu/vegetable/vegetable";
+import DessertMenu from "@/components/jinmu-menu/dessert/dessert";
+import BeveragesMenu from "@/components/jinmu-menu/beverages/beverages";
 
 
 export default function Home() {
@@ -16,12 +26,26 @@ export default function Home() {
   // menuref
   const menuRef = useRef<HTMLDivElement>(null);
   const toMenu = () => {
-    menuRef.current?.scrollIntoView({ behavior: 'smooth'})
+    menuRef.current?.scrollIntoView({ behavior: 'instant'})
   }
 
   // scroll
   const dumplingRef = useRef<HTMLDivElement>(null);
   const dimsumRef = useRef<HTMLDivElement>(null);
+  const saladSoupRef = useRef<HTMLDivElement>(null);
+  const seafoodRef = useRef<HTMLDivElement>(null);
+  const poultryRef = useRef<HTMLDivElement>(null);
+  const porkRef = useRef<HTMLDivElement>(null);
+  const beefRef = useRef<HTMLDivElement>(null);
+  const tofuRef = useRef<HTMLDivElement>(null);
+  const othersRef = useRef<HTMLDivElement>(null);
+  const lamianRef = useRef<HTMLDivElement>(null);
+  const riceRef = useRef<HTMLDivElement>(null);
+  const vegetableRef = useRef<HTMLDivElement>(null);
+  const dessertRef = useRef<HTMLDivElement>(null);
+  const beveragesRef = useRef<HTMLDivElement>(null);
+
+
     
   return (
     <>
@@ -61,11 +85,35 @@ export default function Home() {
 
       {/* restaurant menu */}
       <div ref={menuRef} className="w-full xl:w-[79%]">
-        <RestaurantMenu onSeeMenuClick={(category : any) => {
+        <RestaurantMenu onSeeMenuClick={(category : string) => {
           if (category === 'Dumpling') {
             dumplingRef.current?.scrollIntoView({ behavior: 'smooth'})
           } else if (category === 'Dim Sum') {
             dimsumRef.current?.scrollIntoView({ behavior: 'smooth'})
+          } else if (category === 'Salad & Soup') {
+            saladSoupRef.current?.scrollIntoView({ behavior: 'smooth'})
+          } else if (category === 'Seafood') {
+            seafoodRef.current?.scrollIntoView({ behavior: 'smooth'})
+          } else if (category === 'Poultry') {
+            poultryRef.current?.scrollIntoView({ behavior: 'smooth'})
+          } else if (category === 'Pork') {
+            porkRef.current?.scrollIntoView({ behavior: 'smooth'})
+          } else if (category === 'Beef') {
+            beefRef.current?.scrollIntoView({ behavior: 'smooth'})
+          } else if (category === 'Tofu') {
+            tofuRef.current?.scrollIntoView({ behavior: 'instant'})
+          } else if (category === 'Others') {
+            othersRef.current?.scrollIntoView({ behavior: 'instant'})
+          } else if (category === 'La Mian') {
+            lamianRef.current?.scrollIntoView({ behavior: 'instant'})
+          } else if (category === 'Rice') {
+            riceRef.current?.scrollIntoView({ behavior: 'instant'})
+          } else if (category === 'Vegetable') {
+            vegetableRef.current?.scrollIntoView({ behavior: 'instant'})
+          } else if (category === 'Dessert') {
+            dessertRef.current?.scrollIntoView({ behavior: 'instant'})
+          } else if (category === 'Beverages') {
+            beveragesRef.current?.scrollIntoView({behavior: 'instant'})
           }
         }} />
       </div>
@@ -77,6 +125,50 @@ export default function Home() {
 
       <div ref={dimsumRef} className="">
         <Dimsum />
+      </div>
+
+      <div ref={saladSoupRef} className="">
+        <SaladSoup />
+      </div>
+
+      <div ref={seafoodRef} className="">
+        <SeaFood />
+      </div>
+
+      <div ref={poultryRef} className="">
+        <Poultry />
+      </div>
+
+      <div ref={porkRef} className="">
+        <Pork />
+      </div>
+
+      <div ref={beefRef} className="">
+        <Beef />
+      </div>
+
+      <div ref={tofuRef} className="">
+        <Tofu />
+      </div>
+
+      <div ref={othersRef} className="">
+        <OthersMenu />
+      </div>
+
+      <div ref={riceRef} className="">
+        <RiceMenu />
+      </div>
+
+      <div ref={vegetableRef} className="">
+        <VegetableMenu />
+      </div>
+
+      <div ref={dessertRef} className="">
+        <DessertMenu />
+      </div>
+
+      <div ref={beveragesRef} className="">
+        <BeveragesMenu />
       </div>
 
     </div>
