@@ -18,9 +18,9 @@ import BeveragesMenu from "@/components/jinmu-menu/beverages/beverages";
 
 
 export default function Home() {
-  const home1 = "/PNG-Main-Menu/90.png";
-  const home2 = "/PNG-Main-Menu/93.png";
-  const home3 = "/PNG-Main-Menu/94.png";
+  const home1 = "/PNG-Main-Menu/90.webp";
+  const home2 = "/PNG-Main-Menu/93.webp";
+  const home3 = "/PNG-Main-Menu/94.webp";
 
   const kondisiScroll = useRef<string>('Dumpling')
   // menuref

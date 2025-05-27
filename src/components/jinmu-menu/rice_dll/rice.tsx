@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function RiceMenu() {
 
     const imageCount = 76;
-    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.png`).slice(50,60);
+    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.webp`).slice(50,60);
 
     return (
         <div className="">

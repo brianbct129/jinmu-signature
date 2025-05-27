@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function Dumpling() {
 
     const imageCount = 4;
-    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.png`);
+    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.webp`);
 
     return (
         <div className="">

@@ -8,7 +8,7 @@ const end = 41;
 const images = [];
 for (let i = start; i <= end; i++) {
   if (i === 40) continue; // Skip nomor 40
-  images.push(`/PNG-Main-Menu/${i}.png`);
+  images.push(`/PNG-Main-Menu/${i}.webp`);
 }
     
     return (

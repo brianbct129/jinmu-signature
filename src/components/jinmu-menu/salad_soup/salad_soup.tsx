@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function SaladSoup() {
 
     const imageCount = 8;
-    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.png`).slice(4,8);
+    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.webp`).slice(4,8);
 
     return (
         <div className="">

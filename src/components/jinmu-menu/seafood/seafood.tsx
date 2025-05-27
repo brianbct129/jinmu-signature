@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function SeaFood() {
     
     const imageCount = 30;
-    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.png`).slice(8,30);
+    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.webp`).slice(8,30);
     
     return (
         <div className="">

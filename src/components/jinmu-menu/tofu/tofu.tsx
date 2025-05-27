@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Tofu() {
     
     const imageCount = 48;
-    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.png`).slice(44,48);
+    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.webp`).slice(44,48);
     
     return (
         <div className="">

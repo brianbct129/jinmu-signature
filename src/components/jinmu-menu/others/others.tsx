@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function OthersMenu() {
     
     const imageCount = 50;
-    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.png`).slice(48,50);
+    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.webp`).slice(48,50);
 
     return (
         <div className="">

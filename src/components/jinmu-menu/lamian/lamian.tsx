@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function LamianMenu() {
 
     const imageCount = 17;
-    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Daytime/${i + 1}.png`).slice(13,17);
+    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Daytime/${i + 1}.webp`).slice(13,17);
 
 
     return (
