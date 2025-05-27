@@ -3,7 +3,7 @@ import Image from "next/image";
 import RestaurantMenu from "@/components/restaurant-menu";
 import Dumpling from "@/components/jinmu-menu/dumpling/dumpling";
 import Dimsum from "@/components/jinmu-menu/dimsum/dimsum";
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import SaladSoup from "@/components/jinmu-menu/salad_soup/salad_soup";
 import SeaFood from "@/components/jinmu-menu/seafood/seafood";
 import Poultry from "@/components/jinmu-menu/poultry/poultry";
@@ -22,11 +22,17 @@ export default function Home() {
   const home2 = "/PNG-Main-Menu/93.png";
   const home3 = "/PNG-Main-Menu/94.png";
 
-  
+  const kondisiScroll = useRef<string>('Dumpling')
   // menuref
   const menuRef = useRef<HTMLDivElement>(null);
   const toMenu = () => {
-    menuRef.current?.scrollIntoView({ behavior: 'instant'})
+    if(
+      kondisiScroll.current === "Dumpling" || kondisiScroll.current === "Dim Sum" || kondisiScroll.current === "Seafood" || kondisiScroll.current === "Poultry" || kondisiScroll.current === "Pork" || kondisiScroll.current === "Beef"
+    ){
+      menuRef.current?.scrollIntoView({ behavior: 'smooth'})
+    } else {
+      menuRef.current?.scrollIntoView({ behavior: 'instant'})
+    }
   }
 
   // scroll
@@ -87,32 +93,46 @@ export default function Home() {
       <div ref={menuRef} className="w-full xl:w-[79%]">
         <RestaurantMenu onSeeMenuClick={(category : string) => {
           if (category === 'Dumpling') {
+            kondisiScroll.current = category
             dumplingRef.current?.scrollIntoView({ behavior: 'smooth'})
           } else if (category === 'Dim Sum') {
+            kondisiScroll.current = category
             dimsumRef.current?.scrollIntoView({ behavior: 'smooth'})
           } else if (category === 'Salad & Soup') {
+            kondisiScroll.current = category
             saladSoupRef.current?.scrollIntoView({ behavior: 'smooth'})
           } else if (category === 'Seafood') {
+            kondisiScroll.current = category
             seafoodRef.current?.scrollIntoView({ behavior: 'smooth'})
           } else if (category === 'Poultry') {
+            kondisiScroll.current = category
             poultryRef.current?.scrollIntoView({ behavior: 'smooth'})
           } else if (category === 'Pork') {
+            kondisiScroll.current = category
             porkRef.current?.scrollIntoView({ behavior: 'smooth'})
           } else if (category === 'Beef') {
+            kondisiScroll.current = category
             beefRef.current?.scrollIntoView({ behavior: 'smooth'})
           } else if (category === 'Tofu') {
+            kondisiScroll.current = category
             tofuRef.current?.scrollIntoView({ behavior: 'instant'})
           } else if (category === 'Others') {
+            kondisiScroll.current = category
             othersRef.current?.scrollIntoView({ behavior: 'instant'})
           } else if (category === 'La Mian') {
+            kondisiScroll.current = category
             lamianRef.current?.scrollIntoView({ behavior: 'instant'})
           } else if (category === 'Rice') {
+            kondisiScroll.current = category
             riceRef.current?.scrollIntoView({ behavior: 'instant'})
           } else if (category === 'Vegetable') {
+            kondisiScroll.current = category
             vegetableRef.current?.scrollIntoView({ behavior: 'instant'})
           } else if (category === 'Dessert') {
+            kondisiScroll.current = category
             dessertRef.current?.scrollIntoView({ behavior: 'instant'})
           } else if (category === 'Beverages') {
+            kondisiScroll.current = category
             beveragesRef.current?.scrollIntoView({behavior: 'instant'})
           }
         }} />

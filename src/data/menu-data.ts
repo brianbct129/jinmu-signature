@@ -7,23 +7,23 @@ export const menuItems: CategoryOnly[] = [
     },
     {
         category: "Dim Sum",
-        tags: ["favorite"],
+        tags: ["favorite", "chef"],
     },
     {
         category: "Salad & Soup",
-        tags: ["spicy"],
+        tags: ["favorite"],
     },
     {
         category: "Seafood",
-        tags: ["chef"],
-    },
-    {
-        category: "Poultry",
         tags: ["chef", "spicy"],
     },
     {
+        category: "Poultry",
+        tags: ["favorite"],
+    },
+    {
         category: "Pork",
-        tags: ["favorite", "spicy"],
+        tags: ["favorite"],
     },
     {
         category: "Beef",
@@ -31,11 +31,11 @@ export const menuItems: CategoryOnly[] = [
     },
     {
         category: "Tofu",
-        tags: ["favorite", "spicy"],
+        tags: ["favorite", "chef"],
     },
     {
         category: "Others",
-        tags: ["chef", "spicy"],
+        tags: ["favorite"],
     },
     {
         category: "La Mian",
@@ -47,7 +47,7 @@ export const menuItems: CategoryOnly[] = [
     },
     {
         category: "Vegetable",
-        tags: ["spicy"],
+        tags: ["favorite"],
     },
     {
         category: "Dessert",
