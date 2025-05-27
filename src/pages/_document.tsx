@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" href="/jinmu.webp" />
+        <link rel="icon" href="/jinmu1.png" />
       </Head>
       <body className="antialiased">
         <Main />

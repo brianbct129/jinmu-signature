@@ -59,7 +59,7 @@ export default function Home() {
       <title>JINMU SIGNATURE</title>
       <meta name="description" content="Refinning the comfort your Chinnese dinning experience" />
     </Head>
-    <div className="flex flex-col items-center justify-center  gap-3">
+    <div className="flex flex-col items-center justify-center">
 
       <div className="fixed bottom-10 right-2 z-50">
         <button onClick={toMenu} className="bg-gradient-to-r from-[#c7a459] to-[#e6d3a1] text-[#0f2e2d] font-serif tracking-widest px-6 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
@@ -68,7 +68,7 @@ export default function Home() {
       </div>
 
       <Image
-                    priority
+        priority
         src={home1}
         alt="Menu Jinmu"
         width={1200}
@@ -76,15 +76,7 @@ export default function Home() {
         layout="intrinsic"
       />
       <Image
-                    priority
-        src={home2}
-        alt="Menu Jinmu"
-        width={1200}
-        height={0}
-        layout="intrinsic"
-      />
-      <Image
-                    priority
+        priority
         src={home3}
         alt="Menu Jinmu"
         width={1200}
@@ -193,6 +185,15 @@ export default function Home() {
       <div ref={beveragesRef} className="">
         <BeveragesMenu />
       </div>
+
+      <Image
+        priority
+        src={home2}
+        alt="Menu Jinmu"
+        width={1200}
+        height={0}
+        layout="intrinsic"
+      />
 
     </div>
     </>
