@@ -1,36 +1,8 @@
 import { menuItems } from "@/data/menu-data"
-import { Star, Award, Flame } from "lucide-react"
 import { RestaurantMenuProps } from "@/types/menu";
 
 
-export default function RestaurantMenu({ 
-    onSeeMenuClick, } : RestaurantMenuProps) {
-
-    // Tag components
-    const TagIcon = ({ tag }: { tag: string }) => {
-        switch (tag) {
-            case "chef":
-            return (
-                <div className="tooltip cursor-pointer" data-tip="Chef's Recommendation">
-                    <Award size={20} className="text-amber-600" />
-                </div>
-            )
-            case "favorite":
-            return (
-                <div className="tooltip cursor-pointer" data-tip="Customer Favorite">
-                    <Star size={20} className="text-amber-500" />
-                </div>
-            )
-            case "spicy":
-            return (
-                <div className="tooltip cursor-pointer" data-tip="Spicy">
-                    <Flame size={20} className="text-red-500" />
-                </div>
-            )
-            default:
-            return null
-        }
-    }
+export default function RestaurantMenu({ onSeeMenuClick, } : RestaurantMenuProps) {
 
     return (
         <div className="bg-white bg-[url('/Bg-menu-jinmu.png')] bg-opacity-95 bg-fixed bg-cover max-w-screen-xl w-full mx-auto">
