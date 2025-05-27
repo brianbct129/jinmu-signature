@@ -2,8 +2,14 @@ import Image from "next/image";
 
 export default function Pork() {
 
-    const imageCount = 41;
-    const images = Array.from({ length: imageCount }, (_, i) => `/PNG-Main-Menu/${i + 1}.png`).slice(34,41);
+const start = 35;
+const end = 41;
+
+const images = [];
+for (let i = start; i <= end; i++) {
+  if (i === 40) continue; // Skip nomor 40
+  images.push(`/PNG-Main-Menu/${i}.png`);
+}
     
     return (
         <div className="">
