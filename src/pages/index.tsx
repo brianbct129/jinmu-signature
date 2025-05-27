@@ -68,6 +68,7 @@ export default function Home() {
       </div>
 
       <Image
+                    priority
         src={home1}
         alt="Menu Jinmu"
         width={1200}
@@ -75,6 +76,7 @@ export default function Home() {
         layout="intrinsic"
       />
       <Image
+                    priority
         src={home2}
         alt="Menu Jinmu"
         width={1200}
@@ -82,6 +84,7 @@ export default function Home() {
         layout="intrinsic"
       />
       <Image
+                    priority
         src={home3}
         alt="Menu Jinmu"
         width={1200}

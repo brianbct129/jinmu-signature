@@ -9,6 +9,7 @@ export default function DessertMenu() {
         <div className="">
             {images.map((src, index) => (
                 <Image
+                    priority
                     key={index}
                     src={src}
                     alt="Dessert Menu Jinmu"

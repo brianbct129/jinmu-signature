@@ -10,6 +10,7 @@ export default function LamianMenu() {
         <div className="">
             {images.map((src, index) => (
                 <Image
+                    priority
                     key={index}
                     src={src}
                     alt="Lamian - Jinmu Menu"

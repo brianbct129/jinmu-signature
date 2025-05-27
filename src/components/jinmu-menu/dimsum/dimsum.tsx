@@ -9,6 +9,7 @@ export default function Dimsum() {
         <div className="">
             {images.slice(4,13).map((src, index) => (
                 <Image
+                    priority
                     key={index}
                     src={src}
                     alt="Menu Jinmu"
