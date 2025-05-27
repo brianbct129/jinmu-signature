@@ -3,7 +3,7 @@ import Image from "next/image";
 import RestaurantMenu from "@/components/restaurant-menu";
 import Dumpling from "@/components/jinmu-menu/dumpling/dumpling";
 import Dimsum from "@/components/jinmu-menu/dimsum/dimsum";
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import SaladSoup from "@/components/jinmu-menu/salad_soup/salad_soup";
 import SeaFood from "@/components/jinmu-menu/seafood/seafood";
 import Poultry from "@/components/jinmu-menu/poultry/poultry";
