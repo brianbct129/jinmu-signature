@@ -9,7 +9,7 @@ export default function RestaurantMenu({ onSeeMenuClick, } : RestaurantMenuProps
             <div className="mx-auto px-4 py-12" >
                 {/* restaurant logo */}
 
-                 <h1 className="text-center font-serif text-2xl sm:text-3xl md:text-5xl text-[#e9cd92] mb-8 tracking-wide">JINMU SIGNATURE</h1>
+                 <h1 className="text-center font-serif text-2xl sm:text-3xl md:text-5xl text-[#e9cd92] mb-8 tracking-wide">Jin Mu Signature</h1>
 
                 <div className="text-center mb-12">
                     <div className="inline-block h-0.5 w-10 md:w-16 bg-amber-500 mx-2"></div>
