@@ -5,7 +5,7 @@ import { RestaurantMenuProps } from "@/types/menu";
 export default function RestaurantMenu({ onSeeMenuClick, } : RestaurantMenuProps) {
 
     return (
-        <div className="bg-[url('/Bg-menu-jinmu.png')] bg-opacity-95 bg-fixed bg-contain md:bg-cover mx-auto" style={{ maxWidth: '1200px'}}>
+        <div className="bg-[url('/Bg-menu-jinmu.png')] bg-opacity-95 bg-fixed bg-contain md:bg-cover mx-auto ">
             <div className="mx-auto px-4 py-12" >
                 {/* restaurant logo */}
 

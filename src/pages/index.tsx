@@ -86,7 +86,7 @@ export default function Home() {
       />
 
       {/* restaurant menu */}
-      <div ref={menuRef} className="w-full xl:w-[79%]">
+      <div ref={menuRef} className="w-full" style={{ maxWidth: '1200px'}}>
         <RestaurantMenu onSeeMenuClick={(category : string) => {
           if (category === 'Dumpling') {
             kondisiScroll.current = category
