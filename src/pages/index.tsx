@@ -15,6 +15,7 @@ import RiceMenu from "@/components/jinmu-menu/rice_dll/rice";
 import VegetableMenu from "@/components/jinmu-menu/vegetable/vegetable";
 import DessertMenu from "@/components/jinmu-menu/dessert/dessert";
 import BeveragesMenu from "@/components/jinmu-menu/beverages/beverages";
+import LamianMenu from "@/components/jinmu-menu/lamian/lamian";
 
 
 export default function Home() {
@@ -27,7 +28,7 @@ export default function Home() {
   const menuRef = useRef<HTMLDivElement>(null);
   const toMenu = () => {
     if(
-      kondisiScroll.current === "Dumpling" || kondisiScroll.current === "Dim Sum" || kondisiScroll.current === "Seafood" || kondisiScroll.current === "Poultry" || kondisiScroll.current === "Pork" || kondisiScroll.current === "Beef"
+      kondisiScroll.current === "Dumpling" || kondisiScroll.current === "Dim Sum" || kondisiScroll.current === "Salad & Soup" || kondisiScroll.current === "Seafood" || kondisiScroll.current === "Poultry" || kondisiScroll.current === "Pork" || kondisiScroll.current === "Beef"
     ){
       menuRef.current?.scrollIntoView({ behavior: 'smooth'})
     } else {
@@ -168,6 +169,10 @@ export default function Home() {
 
       <div ref={othersRef} className="">
         <OthersMenu />
+      </div>
+
+      <div ref={lamianRef} className="">
+        <LamianMenu />
       </div>
 
       <div ref={riceRef} className="">
