@@ -42,7 +42,7 @@ export const menuItems: CategoryOnly[] = [
         tags: ["chef", "favorite"],
     },
     {
-        category: "Rice",
+        category: "Rice & Noodles",
         tags: ["favorite"],
     },
     {
