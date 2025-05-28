@@ -58,7 +58,7 @@ export default function Home() {
     <>
     <Head>
       <title>JINMU SIGNATURE</title>
-      <meta name="description" content="Refinning the comfort your Chinnese dinning experience" />
+      <meta name="description" content="Refining the Comfort of Your Chinese Dining Experience" />
     </Head>
     <div className="flex flex-col items-center justify-center">
 
