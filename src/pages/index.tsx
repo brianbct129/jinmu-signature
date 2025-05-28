@@ -118,7 +118,7 @@ export default function Home() {
           } else if (category === 'La Mian') {
             kondisiScroll.current = category
             lamianRef.current?.scrollIntoView({ behavior: 'instant'})
-          } else if (category === 'Rice') {
+          } else if (category === 'Rice & Noodles') {
             kondisiScroll.current = category
             riceRef.current?.scrollIntoView({ behavior: 'instant'})
           } else if (category === 'Vegetable') {
