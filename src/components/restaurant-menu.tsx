@@ -13,7 +13,7 @@ export default function RestaurantMenu({ onSeeMenuClick, } : RestaurantMenuProps
 
                 <div className="text-center mb-12">
                     <div className="inline-block h-0.5 w-10 md:w-16 bg-amber-500 mx-2"></div>
-                    <span className="text-[#e9cd92] font-light tracking-widest text-sm">MENU CATEGORY JINMU</span>
+                    <span className="text-[#e9cd92] font-light tracking-widest text-sm">MENU CATEGORY</span>
                     <div className="inline-block h-0.5 w-10 md:w-16 bg-amber-500 mx-2"></div>
                 </div>
 
